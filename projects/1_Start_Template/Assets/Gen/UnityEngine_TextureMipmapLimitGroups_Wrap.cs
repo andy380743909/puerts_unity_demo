@@ -27,54 +27,6 @@ namespace PuertsStaticWrap
 
     // ==================== methods start ====================
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        internal static void F_CreateGroup(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
-        {
-            try
-            {
-        
-                {
-            
-                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
-                    object argobj0 = null;
-                    ;
-                    {
-                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
-
-                        UnityEngine.TextureMipmapLimitGroups.CreateGroup (arg0);
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
-            }
-        }
-        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        internal static void F_RemoveGroup(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
-        {
-            try
-            {
-        
-                {
-            
-                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
-                    object argobj0 = null;
-                    ;
-                    {
-                        string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
-
-                        UnityEngine.TextureMipmapLimitGroups.RemoveGroup (arg0);
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
-            }
-        }
-        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void F_GetGroups(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try

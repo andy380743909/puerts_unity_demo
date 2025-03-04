@@ -135,9 +135,13 @@ public class PuertsConfig
         "UnityEngine.MeshRenderer",
         "UnityEngine.UI.DefaultControls",
         
+        //Platform  Special
+        "UnityEngine.GamepadSpeakerOutputType",
+        
         "UnityEngine.AnimationClipPair", //Obsolete
         "UnityEngine.CacheIndex", //Obsolete
         "UnityEngine.Camera.RenderRequest", //Obsolete
+        "UnityEngine.CloudStreaming", //Obsolete
         "UnityEngine.ClusterSerialization", //Obsolete
         "UnityEngine.SerializePrivateVariables", //Obsolete
         "UnityEngine.Networking.NetworkTransport", //Obsolete

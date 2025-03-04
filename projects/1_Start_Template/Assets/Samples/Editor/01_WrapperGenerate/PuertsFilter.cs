@@ -64,10 +64,38 @@ public class PuertsFilter : Editor
                 new List<string>(){"UnityEngine.GameObject", "networkView"}, //4.6.2 not support
                 new List<string>(){"UnityEngine.Component", "networkView"},  //4.6.2 not support
                 new List<string>(){"UnityEngine.MonoBehaviour", "runInEditMode"},
+                new List<string>(){"UnityEngine.ArticulationBody","SetJointAcceleration", "UnityEngine.ArticulationReducedSpace"},
                 new List<string>(){"UnityEngine.AnimatorControllerParameter", "name"},
                 new List<string>(){"UnityEngine.AudioSettings", "GetSpatializerPluginNames"},
                 new List<string>(){"UnityEngine.AudioSettings", "SetSpatializerPluginName", "System.String"},
+                
+                new List<string>(){"UnityEngine.AudioSource", "PlayOnGamepad", "System.Int32"},
+                new List<string>(){"UnityEngine.AudioSource", "DisableGamepadOutput"},
+                new List<string>(){"UnityEngine.AudioSource", "SetGamepadSpeakerMixLevel", "System.Int32", "System.Int32"},
+                new List<string>(){"UnityEngine.AudioSource", "SetGamepadSpeakerMixLevelDefault", "System.Int32"},
+                new List<string>(){"UnityEngine.AudioSource", "SetGamepadSpeakerRestrictedAudio", "System.Int32", "System.Boolean"},
+                new List<string>(){"UnityEngine.AudioSource", "GamepadSpeakerSupportsOutputType", "UnityEngine.GamepadSpeakerOutputType"},
+                new List<string>(){"UnityEngine.AudioSource", "gamepadSpeakerOutputType"},
+                new List<string>(){"UnityEngine.AudioSource", "SetGamepadSpeakerOutputType", "UnityEngine.GamepadSpeakerOutputType"},
+                
                 new List<string>(){"UnityEngine.QualitySettings", "streamingMipmapsRenderersPerFrame"},
+                new List<string>(){"UnityEngine.QualitySettings", "IsPlatformIncluded", "System.String", "System.Int32"},
+                
+                new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "System.String", "System.Int32", "System.Exception"},
+                new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "System.String", "System.Int32", "System.Exception"},
+                
+                new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "*"},
+                new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "*"},
+                
+                new List<string>(){"UnityEngine.QualitySettings", "GetActiveQualityLevelsForPlatform", "System.String"},
+                new List<string>(){"UnityEngine.QualitySettings", "GetActiveQualityLevelsForPlatformCount", "System.String"},
+                new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "System.String", "System.Collections.Generic.List<UnityEngine.Rendering.RenderPipelineAsset>"},
+                
+                new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "*"},
+                
+                new List<string>(){"UnityEngine.TextureMipmapLimitGroups", "CreateGroup", "System.String"},
+                new List<string>(){"UnityEngine.TextureMipmapLimitGroups", "RemoveGroup", "System.String"},
+                
                 new List<string>(){"UnityEngine.Input", "IsJoystickPreconfigured", "System.String"},
                 new List<string>(){"UnityEngine.ParticleSystemForceField", "FindAll"},
                 new List<string>(){"UnityEngine.Texture", "imageContentsHash"},

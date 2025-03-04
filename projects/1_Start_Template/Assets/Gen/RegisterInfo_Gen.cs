@@ -7125,29 +7125,29 @@ namespace PuertsStaticWrap
                     , Constructor = UnityEngine_AudioSource_Wrap.Constructor
 #endif
                     }},
-                    {"PlayOnGamepad", new MemberRegisterInfo { Name = "PlayOnGamepad", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"PlayOnGamepad", new MemberRegisterInfo { Name = "PlayOnGamepad", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.M_PlayOnGamepad
+                    
 #endif
                     }},
-                    {"DisableGamepadOutput", new MemberRegisterInfo { Name = "DisableGamepadOutput", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"DisableGamepadOutput", new MemberRegisterInfo { Name = "DisableGamepadOutput", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.M_DisableGamepadOutput
+                    
 #endif
                     }},
-                    {"SetGamepadSpeakerMixLevel", new MemberRegisterInfo { Name = "SetGamepadSpeakerMixLevel", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetGamepadSpeakerMixLevel", new MemberRegisterInfo { Name = "SetGamepadSpeakerMixLevel", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.M_SetGamepadSpeakerMixLevel
+                    
 #endif
                     }},
-                    {"SetGamepadSpeakerMixLevelDefault", new MemberRegisterInfo { Name = "SetGamepadSpeakerMixLevelDefault", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetGamepadSpeakerMixLevelDefault", new MemberRegisterInfo { Name = "SetGamepadSpeakerMixLevelDefault", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.M_SetGamepadSpeakerMixLevelDefault
+                    
 #endif
                     }},
-                    {"SetGamepadSpeakerRestrictedAudio", new MemberRegisterInfo { Name = "SetGamepadSpeakerRestrictedAudio", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetGamepadSpeakerRestrictedAudio", new MemberRegisterInfo { Name = "SetGamepadSpeakerRestrictedAudio", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.M_SetGamepadSpeakerRestrictedAudio
+                    
 #endif
                     }},
                     {"Play", new MemberRegisterInfo { Name = "Play", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -7265,9 +7265,9 @@ namespace PuertsStaticWrap
                     , PropertyGetter = UnityEngine_AudioSource_Wrap.G_outputAudioMixerGroup, PropertySetter = UnityEngine_AudioSource_Wrap.S_outputAudioMixerGroup
 #endif
                     }},
-                    {"gamepadSpeakerOutputType", new MemberRegisterInfo { Name = "gamepadSpeakerOutputType", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"gamepadSpeakerOutputType", new MemberRegisterInfo { Name = "gamepadSpeakerOutputType", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_AudioSource_Wrap.G_gamepadSpeakerOutputType, PropertySetter = UnityEngine_AudioSource_Wrap.S_gamepadSpeakerOutputType
+                    
 #endif
                     }},
                     {"isPlaying", new MemberRegisterInfo { Name = "isPlaying", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
@@ -7380,9 +7380,9 @@ namespace PuertsStaticWrap
                     , PropertyGetter = UnityEngine_AudioSource_Wrap.G_rolloffMode, PropertySetter = UnityEngine_AudioSource_Wrap.S_rolloffMode
 #endif
                     }},
-                    {"GamepadSpeakerSupportsOutputType_static", new MemberRegisterInfo { Name = "GamepadSpeakerSupportsOutputType", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GamepadSpeakerSupportsOutputType_static", new MemberRegisterInfo { Name = "GamepadSpeakerSupportsOutputType", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_AudioSource_Wrap.F_GamepadSpeakerSupportsOutputType
+                    
 #endif
                     }},
                     {"PlayClipAtPoint_static", new MemberRegisterInfo { Name = "PlayClipAtPoint", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -10186,45 +10186,6 @@ namespace PuertsStaticWrap
                     {"defaultTexture_static", new MemberRegisterInfo { Name = "defaultTexture", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
                     , PropertyGetter = UnityEngine_ReflectionProbe_Wrap.G_defaultTexture
-#endif
-                    }},
-                }
-            };
-        }
-        public static RegisterInfo GetRegisterInfo_UnityEngine_CloudStreaming_Wrap() 
-        {
-            return new RegisterInfo 
-            {
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                BlittableCopy = false,
-#endif
-
-                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
-                {
-                    
-                    {"PostMessage_static", new MemberRegisterInfo { Name = "PostMessage", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_CloudStreaming_Wrap.F_PostMessage
-#endif
-                    }},
-                    {"PeekMessage_static", new MemberRegisterInfo { Name = "PeekMessage", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_CloudStreaming_Wrap.F_PeekMessage
-#endif
-                    }},
-                    {"PeekRemoteAudioCapture_static", new MemberRegisterInfo { Name = "PeekRemoteAudioCapture", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_CloudStreaming_Wrap.F_PeekRemoteAudioCapture
-#endif
-                    }},
-                    {"EnableMicRecording_static", new MemberRegisterInfo { Name = "EnableMicRecording", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_CloudStreaming_Wrap.F_EnableMicRecording
-#endif
-                    }},
-                    {"DisableMicRecording_static", new MemberRegisterInfo { Name = "DisableMicRecording", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_CloudStreaming_Wrap.F_DisableMicRecording
 #endif
                     }},
                 }
@@ -13089,34 +13050,34 @@ namespace PuertsStaticWrap
                     , Method = UnityEngine_QualitySettings_Wrap.F_GetQualitySettings
 #endif
                     }},
-                    {"IsPlatformIncluded_static", new MemberRegisterInfo { Name = "IsPlatformIncluded", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"IsPlatformIncluded_static", new MemberRegisterInfo { Name = "IsPlatformIncluded", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_IsPlatformIncluded
+                    
 #endif
                     }},
-                    {"TryIncludePlatformAt_static", new MemberRegisterInfo { Name = "TryIncludePlatformAt", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"TryIncludePlatformAt_static", new MemberRegisterInfo { Name = "TryIncludePlatformAt", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_TryIncludePlatformAt
+                    
 #endif
                     }},
-                    {"TryExcludePlatformAt_static", new MemberRegisterInfo { Name = "TryExcludePlatformAt", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"TryExcludePlatformAt_static", new MemberRegisterInfo { Name = "TryExcludePlatformAt", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_TryExcludePlatformAt
+                    
 #endif
                     }},
-                    {"GetActiveQualityLevelsForPlatform_static", new MemberRegisterInfo { Name = "GetActiveQualityLevelsForPlatform", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetActiveQualityLevelsForPlatform_static", new MemberRegisterInfo { Name = "GetActiveQualityLevelsForPlatform", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_GetActiveQualityLevelsForPlatform
+                    
 #endif
                     }},
-                    {"GetActiveQualityLevelsForPlatformCount_static", new MemberRegisterInfo { Name = "GetActiveQualityLevelsForPlatformCount", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetActiveQualityLevelsForPlatformCount_static", new MemberRegisterInfo { Name = "GetActiveQualityLevelsForPlatformCount", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_GetActiveQualityLevelsForPlatformCount
+                    
 #endif
                     }},
-                    {"GetAllRenderPipelineAssetsForPlatform_static", new MemberRegisterInfo { Name = "GetAllRenderPipelineAssetsForPlatform", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetAllRenderPipelineAssetsForPlatform_static", new MemberRegisterInfo { Name = "GetAllRenderPipelineAssetsForPlatform", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_QualitySettings_Wrap.F_GetAllRenderPipelineAssetsForPlatform
+                    
 #endif
                     }},
                     {"pixelLightCount_static", new MemberRegisterInfo { Name = "pixelLightCount", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
@@ -16597,14 +16558,14 @@ namespace PuertsStaticWrap
                 Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
                 {
                     
-                    {"CreateGroup_static", new MemberRegisterInfo { Name = "CreateGroup", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"CreateGroup_static", new MemberRegisterInfo { Name = "CreateGroup", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_TextureMipmapLimitGroups_Wrap.F_CreateGroup
+                    
 #endif
                     }},
-                    {"RemoveGroup_static", new MemberRegisterInfo { Name = "RemoveGroup", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"RemoveGroup_static", new MemberRegisterInfo { Name = "RemoveGroup", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_TextureMipmapLimitGroups_Wrap.F_RemoveGroup
+                    
 #endif
                     }},
                     {"GetGroups_static", new MemberRegisterInfo { Name = "GetGroups", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -42829,7 +42790,6 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.CullingGroup), GetRegisterInfo_UnityEngine_CullingGroup_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.FlareLayer), GetRegisterInfo_UnityEngine_FlareLayer_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.ReflectionProbe), GetRegisterInfo_UnityEngine_ReflectionProbe_Wrap);
-                jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.CloudStreaming), GetRegisterInfo_UnityEngine_CloudStreaming_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.CrashReport), GetRegisterInfo_UnityEngine_CrashReport_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.ExposedPropertyResolver), GetRegisterInfo_UnityEngine_ExposedPropertyResolver_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.IExposedPropertyTable), GetRegisterInfo_UnityEngine_IExposedPropertyTable_Wrap);

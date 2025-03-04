@@ -7665,10 +7665,6 @@
             */
             public get outputAudioMixerGroup(): UnityEngine.Audio.AudioMixerGroup;
             public set outputAudioMixerGroup(value: UnityEngine.Audio.AudioMixerGroup);
-            /** Gets or sets the gamepad audio output type for this audio source.
-            */
-            public get gamepadSpeakerOutputType(): UnityEngine.GamepadSpeakerOutputType;
-            public set gamepadSpeakerOutputType(value: UnityEngine.GamepadSpeakerOutputType);
             /** Is the clip playing right now (Read Only)?
             */
             public get isPlaying(): boolean;
@@ -7755,23 +7751,6 @@
             */
             public get rolloffMode(): UnityEngine.AudioRolloffMode;
             public set rolloffMode(value: UnityEngine.AudioRolloffMode);
-            /** Enable playing of audio source though a specfic gamepad.
-            * @param $slot Slot number of the gamepad (0-3).
-            * @returns Returns TRUE if enabling audio output through this users controller was successful. 
-            */
-            public PlayOnGamepad ($slot: number) : boolean
-            /** Disables audio output to a gamepad for this audio source.
-            * @returns Returns true if successful. 
-            */
-            public DisableGamepadOutput () : boolean
-            public SetGamepadSpeakerMixLevel ($slot: number, $mixLevel: number) : boolean
-            public SetGamepadSpeakerMixLevelDefault ($slot: number) : boolean
-            public SetGamepadSpeakerRestrictedAudio ($slot: number, $restricted: boolean) : boolean
-            /** Check if the platform supports an audio output type  on gamepads.
-            * @param $outputType The desired output type.
-            * @returns Returns true if the gamepad supports the specified audio output type. 
-            */
-            public static GamepadSpeakerSupportsOutputType ($outputType: UnityEngine.GamepadSpeakerOutputType) : boolean
             public Play () : void
             /** Plays the clip.
             * @param $delay Deprecated. Delay in number of samples, assuming a 44100Hz sample rate (meaning that Play(44100) will delay the playing by exactly 1 sec).
@@ -10294,15 +10273,6 @@
             public static add_defaultReflectionTexture ($value: System.Action$1<UnityEngine.Texture>) : void
             public static remove_defaultReflectionTexture ($value: System.Action$1<UnityEngine.Texture>) : void
             public constructor ()
-        }
-        class CloudStreaming extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public static PostMessage ($content: string) : boolean
-            public static PeekMessage () : string
-            public static PeekRemoteAudioCapture () : System.Array$1<number>
-            public static EnableMicRecording () : boolean
-            public static DisableMicRecording () : boolean
         }
         /** Holds data for a single application crash event and provides access to all gathered crash reports.
         */
@@ -15091,37 +15061,6 @@
             * @param $applyExpensiveChanges Should expensive changes be applied (Anti-aliasing etc).
             */
             public static SetQualityLevel ($index: number, $applyExpensiveChanges: boolean) : void
-            /** [Editor Only] Returns if the given platform is included by the Quality Level.
-            * @param $buildTargetGroupName The platform name.
-            * @param $index The index of the Quality Level, must be positive and lower than the count of Quality Levels.
-            * @returns If the platform is included. 
-            */
-            public static IsPlatformIncluded ($buildTargetGroupName: string, $index: number) : boolean
-            /** [Editor Only] Includes a platform to be supported by the Quality Level.
-            * @param $buildTargetGroupName The platform name.
-            * @param $index The index of the Quality Level, must be positive and lower than the count of Quality Levels.
-            * @param $error The error found by the API.
-            * @returns If errors were found. 
-            */
-            public static TryIncludePlatformAt ($buildTargetGroupName: string, $index: number, $error: $Ref<System.Exception>) : boolean
-            /** [Editor Only] Excludes a platfor for the given Quality Level.
-            * @param $buildTargetGroupName The platform name.
-            * @param $index The index of the Quality Level, must be positive and lower than the count of Quality Levels.
-            * @param $error The error raised by the API.
-            * @returns True if no errors were found. 
-            */
-            public static TryExcludePlatformAt ($buildTargetGroupName: string, $index: number, $error: $Ref<System.Exception>) : boolean
-            /** [Editor Only] Obtains an array with the Quality Level indexes that are selected for the given platform.
-            * @param $buildTargetGroupName The platform target.
-            * @returns The array with the Quality Level indexes that are selected for the given platform. 
-            */
-            public static GetActiveQualityLevelsForPlatform ($buildTargetGroupName: string) : System.Array$1<number>
-            /** [Editor Only] Obtains the number of Quality Levels that are selected for a given platform.
-            * @param $buildTargetGroupName The platform to obtain the number of selected Quality Levels.
-            * @returns The total amount of Quality Levels active for the given platform. 
-            */
-            public static GetActiveQualityLevelsForPlatformCount ($buildTargetGroupName: string) : number
-            public static GetAllRenderPipelineAssetsForPlatform ($buildTargetGroupName: string, $renderPipelineAssets: $Ref<System.Collections.Generic.List$1<UnityEngine.Rendering.RenderPipelineAsset>>) : void
         }
         enum QualityLevel
         { Fastest = 0, Fast = 1, Simple = 2, Good = 3, Beautiful = 4, Fantastic = 5 }
@@ -16187,14 +16126,6 @@
         class TextureMipmapLimitGroups extends System.Object
         {
             protected [__keep_incompatibility]: never;
-            /** (Editor Only) Attempts to create a texture mipmap limit group with the indicated groupName.
-            * @param $groupName Name of the new texture mipmap limit group.
-            */
-            public static CreateGroup ($groupName: string) : void
-            /** (Editor Only) Attempts to remove a texture mipmap limit group with the indicated groupName.
-            * @param $groupName Name of the texture mipmap limit group to remove.
-            */
-            public static RemoveGroup ($groupName: string) : void
             /** Retrieves a string array containing the name of all texture mipmap limit groups available in the project.
             * @returns String array of texture mipmap limit group names. 
             */
