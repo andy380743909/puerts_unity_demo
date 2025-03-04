@@ -2469,7 +2469,7 @@ namespace PuertsStaticWrap
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 UnityEngine.ArticulationReducedSpace arg0 = argobj0 != null ? (UnityEngine.ArticulationReducedSpace)argobj0 : StaticTranslate<UnityEngine.ArticulationReducedSpace>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
-                obj.jointAcceleration = arg0;
+                // obj.jointAcceleration = arg0;
             }
             catch (Exception e)
             {
