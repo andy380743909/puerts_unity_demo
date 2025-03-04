@@ -30660,9 +30660,9 @@ namespace PuertsStaticWrap
                     , PropertyGetter = UnityEngine_ArticulationBody_Wrap.G_jointVelocity, PropertySetter = UnityEngine_ArticulationBody_Wrap.S_jointVelocity
 #endif
                     }},
-                    {"jointAcceleration", new MemberRegisterInfo { Name = "jointAcceleration", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"jointAcceleration", new MemberRegisterInfo { Name = "jointAcceleration", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.DontBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_ArticulationBody_Wrap.G_jointAcceleration, PropertySetter = UnityEngine_ArticulationBody_Wrap.S_jointAcceleration
+                    
 #endif
                     }},
                     {"jointForce", new MemberRegisterInfo { Name = "jointForce", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
@@ -42520,7 +42520,6 @@ namespace PuertsStaticWrap
                 }
             };
         }
-        
         public static RegisterInfo GetRegisterInfo_TSProperties_ResultPair_Wrap() 
         {
             return new RegisterInfo 
@@ -43256,7 +43255,6 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.UI.Scrollbar.ScrollEvent), GetRegisterInfo_UnityEngine_UI_Scrollbar_ScrollEvent_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.UI.ScrollRect.ScrollRectEvent), GetRegisterInfo_UnityEngine_UI_ScrollRect_ScrollRectEvent_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.UI.Slider.SliderEvent), GetRegisterInfo_UnityEngine_UI_Slider_SliderEvent_Wrap);
-                
                 jsEnv.AddRegisterInfoGetter(typeof(TSProperties.ResultPair), GetRegisterInfo_TSProperties_ResultPair_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Puerts.JsEnv), GetRegisterInfo_Puerts_JsEnv_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Puerts.ILoader), GetRegisterInfo_Puerts_ILoader_Wrap);

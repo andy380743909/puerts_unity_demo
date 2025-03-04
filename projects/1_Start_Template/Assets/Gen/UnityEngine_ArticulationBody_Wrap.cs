@@ -2447,36 +2447,6 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        internal static void G_jointAcceleration(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
-        {
-            try
-            {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.ArticulationBody;
-                var result = obj.jointAcceleration;
-                Puerts.ResultHelper.Set((int)data, isolate, info, result);
-            }
-            catch (Exception e)
-            {
-                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
-            }
-        }
-        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        internal static void S_jointAcceleration(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
-        {
-            try
-            {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as UnityEngine.ArticulationBody;
-                IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
-                object argobj0 = null;
-                UnityEngine.ArticulationReducedSpace arg0 = argobj0 != null ? (UnityEngine.ArticulationReducedSpace)argobj0 : StaticTranslate<UnityEngine.ArticulationReducedSpace>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
-                // obj.jointAcceleration = arg0;
-            }
-            catch (Exception e)
-            {
-                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
-            }
-        }
-        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void G_jointForce(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try

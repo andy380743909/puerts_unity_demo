@@ -64,7 +64,10 @@ public class PuertsFilter : Editor
                 new List<string>(){"UnityEngine.GameObject", "networkView"}, //4.6.2 not support
                 new List<string>(){"UnityEngine.Component", "networkView"},  //4.6.2 not support
                 new List<string>(){"UnityEngine.MonoBehaviour", "runInEditMode"},
-                new List<string>(){"UnityEngine.ArticulationBody","SetJointAcceleration", "UnityEngine.ArticulationReducedSpace"},
+                
+                // if we need filter a property's getter setter, just use the property name, no need to prefix 'get_' or 'set_'
+                new List<string>(){"UnityEngine.ArticulationBody","jointAcceleration", "UnityEngine.ArticulationReducedSpace"},
+                
                 new List<string>(){"UnityEngine.AnimatorControllerParameter", "name"},
                 new List<string>(){"UnityEngine.AudioSettings", "GetSpatializerPluginNames"},
                 new List<string>(){"UnityEngine.AudioSettings", "SetSpatializerPluginName", "System.String"},
@@ -81,17 +84,37 @@ public class PuertsFilter : Editor
                 new List<string>(){"UnityEngine.QualitySettings", "streamingMipmapsRenderersPerFrame"},
                 new List<string>(){"UnityEngine.QualitySettings", "IsPlatformIncluded", "System.String", "System.Int32"},
                 
-                new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "System.String", "System.Int32", "System.Exception"},
-                new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "System.String", "System.Int32", "System.Exception"},
+                // new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "System.String", "System.Int32", "System.Exception&"},
+                // new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "System.String", "System.Int32", "System.Exception&"},
                 
-                new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "*"},
-                new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "*"},
+                new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "System.String", "System.Int32", "System.Exception&"},
+                new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "System.String", "System.Int32", "System.Exception&"},
+                
+                // new List<string>(){"UnityEngine.QualitySettings", "TryIncludePlatformAt", "*"},
+                // new List<string>(){"UnityEngine.QualitySettings", "TryExcludePlatformAt", "*"},
                 
                 new List<string>(){"UnityEngine.QualitySettings", "GetActiveQualityLevelsForPlatform", "System.String"},
                 new List<string>(){"UnityEngine.QualitySettings", "GetActiveQualityLevelsForPlatformCount", "System.String"},
-                new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "System.String", "System.Collections.Generic.List<UnityEngine.Rendering.RenderPipelineAsset>"},
                 
-                new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "*"},
+                
+                //
+                 // the formatted param name is:
+                 // System.Collections.Generic.List`1[[UnityEngine.Rendering.RenderPipelineAsset, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&
+                 //
+                 // System.Collections.Generic.List`1[UnityEngine.Rendering.RenderPipelineAsset]& renderPipelineAssets
+                 //
+                 
+                 
+                // Not work
+                // new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "System.String", "System.Collections.Generic.List<UnityEngine.Rendering.RenderPipelineAsset>&"},
+                
+                // Not work
+                // new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "System.String", "System.Collections.Generic.List`1[UnityEngine.Rendering.RenderPipelineAsset]&"},
+                
+                // Works but it's just a work around
+                // new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "*"},
+                
+                new List<string>(){"UnityEngine.QualitySettings", "GetAllRenderPipelineAssetsForPlatform", "System.String", "System.Collections.Generic.List<UnityEngine.Rendering.RenderPipelineAsset>&"},
                 
                 new List<string>(){"UnityEngine.TextureMipmapLimitGroups", "CreateGroup", "System.String"},
                 new List<string>(){"UnityEngine.TextureMipmapLimitGroups", "RemoveGroup", "System.String"},
@@ -182,6 +205,9 @@ public class PuertsFilter : Editor
     static bool FilterByBlackList(MemberInfo memberInfo)
     {
         string declaringTypeName = memberInfo.DeclaringType.FullName.Replace("+", ".");
+        
+        // Debug.Log(declaringTypeName);
+        
         Dictionary<string, List<string[]>> methodOrProp;
         List<string[]> paramtersList;
         if (blacklist.TryGetValue(declaringTypeName, out methodOrProp) && (
@@ -195,6 +221,14 @@ public class PuertsFilter : Editor
 
             var paramters = memberInfo is MethodInfo ? ((MethodInfo)memberInfo).GetParameters() : ((ConstructorInfo)memberInfo).GetParameters();
             var paramterNames = (from pInfo in paramters select GetFriendlyName(pInfo.ParameterType)).ToArray();
+
+            // Debug.Log(declaringTypeName + " " + memberInfo.Name + ", " + string.Join(", ", paramterNames));
+            // declaringTypeName
+            // UnityEngine.ArticulationBody
+            // if (memberInfo.Name == "GetAllRenderPipelineAssetsForPlatform")
+            // {
+                // Debug.Log(declaringTypeName + " " + memberInfo.Name + ", " + paramterNames);
+            // }
 
             if (IsMatch(paramtersList, paramterNames))
                 return true;
@@ -216,6 +250,14 @@ public class PuertsFilter : Editor
             declaringTypeName = mParamterNames[0];
             mParamters = mParamters.Skip(1).ToArray();
             mParamterNames = mParamterNames.Skip(1).ToArray();
+            
+            // Debug.Log(declaringTypeName + " " + memberInfo.Name + ", " + string.Join(", ", mParamterNames));
+            //
+            // if (memberInfo.Name == "GetAllRenderPipelineAssetsForPlatform" || memberInfo.Name == "TryIncludePlatformAt")
+            // {
+            //     // Debug.Log("\t" + mParamterNames);
+            // }
+            
             if (blacklist.TryGetValue(declaringTypeName, out methodOrProp) && methodOrProp.TryGetValue(memberInfo.Name, out paramtersList))
             {
 
@@ -234,6 +276,12 @@ public class PuertsFilter : Editor
     }
     static bool IsMatch(List<string[]> paramtersList, string[] mParamters)
     {
+        // for (int i = 0; i < paramtersList.Count; i++)
+        // {
+        //     Debug.Log($"[{i}] => [{string.Join(", ", paramtersList[i])}]");
+        // }
+        // Debug.Log(string.Join(", ", mParamters));
+        
         foreach (var paramters in paramtersList)
         {
             //*(通配) / 屏蔽所有此名称的方法
@@ -246,6 +294,7 @@ public class PuertsFilter : Editor
                 for (int i = 0; i < paramters.Length && exclude; i++)
                 {
                     if (paramters[i] != mParamters[i])
+                        
                         exclude = false;
                 }
                 if (exclude)
@@ -272,7 +321,16 @@ public class PuertsFilter : Editor
     {
         if (string.IsNullOrEmpty(type.FullName))
             return string.Empty;
-
+        
+        // 处理 ref 类型
+        if (type.IsByRef)
+        {
+            string name = GetFriendlyName(type.GetElementType());
+            string result = name + "&";
+            Debug.Log("IsByRef: " + result);
+            return result;
+        }
+        
         if (type.IsArray)
         {
             if (type.GetArrayRank() > 1)
@@ -319,6 +377,8 @@ public class PuertsFilter : Editor
                 {
                     if (memberInfo.Count < 2)
                         continue;
+                    
+                    // Why remove all the whitespace char here?
                     var _memberInfo = memberInfo.Select(o => o.Replace(" ", "")).ToList();
 
                     string fullname = _memberInfo[0];

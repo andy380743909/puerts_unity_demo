@@ -23663,10 +23663,6 @@
             */
             public get jointVelocity(): UnityEngine.ArticulationReducedSpace;
             public set jointVelocity(value: UnityEngine.ArticulationReducedSpace);
-            /** The joint acceleration in reduced coordinates.
-            */
-            public get jointAcceleration(): UnityEngine.ArticulationReducedSpace;
-            public set jointAcceleration(value: UnityEngine.ArticulationReducedSpace);
             /** The joint force in reduced coordinates.
             */
             public get jointForce(): UnityEngine.ArticulationReducedSpace;
@@ -34164,119 +34160,6 @@
             public checkmark : UnityEngine.Sprite
             public dropdown : UnityEngine.Sprite
             public mask : UnityEngine.Sprite
-        }
-    }
-    namespace UnityEditor {
-        /** Derive from this base class to create a custom inspector or editor for your custom object.
-        */
-        class Editor extends UnityEngine.ScriptableObject implements UnityEditor.IToolModeOwner, UnityEditor.IPreviewable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        interface IToolModeOwner
-        {
-        }
-        interface IPreviewable
-        {
-        }
-        /** SerializedProperty and SerializedObject are classes for editing properties on objects in a completely generic way that automatically handles undo, multi-object editing and Prefab overrides.
-        */
-        class SerializedProperty extends System.Object implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /** SerializedObject and SerializedProperty are classes for editing serialized fields on Object|Unity objects in a completely generic way. These classes automatically handle dirtying individual serialized fields so they will be processed by the Undo system and styled correctly for Prefab overrides when drawn in the Inspector.
-        */
-        class SerializedObject extends System.Object implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-    }
-    namespace UnityEditor.GUI {
-        class TSProperties_CustomEditor extends UnityEditor.Editor implements UnityEditor.IToolModeOwner, UnityEditor.IPreviewable
-        {
-            protected [__keep_incompatibility]: never;
-            public get drawInfo(): UnityEditor.GUI.DrawerInfo;
-            public GetElements () : System.Collections.Generic.List$1<UnityEditor.GUI.Element>
-            public constructor ()
-        }
-        class DrawerInfo extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public get element(): UnityEditor.GUI.Element;
-            public set element(value: UnityEditor.GUI.Element);
-            public get serializedObject(): UnityEditor.SerializedObject;
-            public set serializedObject(value: UnityEditor.SerializedObject);
-            public get typeMapping(): System.Collections.Generic.Dictionary$2<string, System.Type>;
-            public set typeMapping(value: System.Collections.Generic.Dictionary$2<string, System.Type>);
-            public get optionsMapping(): System.Collections.Generic.Dictionary$2<string, string>;
-            public set optionsMapping(value: System.Collections.Generic.Dictionary$2<string, string>);
-            public GetOptionsName ($type: System.Type) : string
-            public UpdateProperties () : void
-            public ApplyModifiedProperties () : void
-            public GetSerializedProperty ($name: string) : UnityEditor.SerializedProperty
-            public constructor ()
-        }
-        class Element extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public get type(): System.Type;
-            public get valueType(): System.Type;
-            public get arrayIndex(): number;
-            public get arrayParent(): UnityEditor.SerializedProperty;
-            public get node(): UnityEditor.SerializedProperty;
-            public get keyNode(): UnityEditor.SerializedProperty;
-            public get indexNode(): UnityEditor.SerializedProperty;
-            public get valueNode(): UnityEditor.SerializedProperty;
-            public get key(): string;
-            public set key(value: string);
-            public get index(): number;
-            public set index(value: number);
-            public DeleteCommand () : void
-            public Clean () : void
-            public constructor ($node: UnityEditor.SerializedProperty, $pairType: System.Type)
-            public constructor ($node: UnityEditor.SerializedProperty, $pairType: System.Type, $arrayIndex: number, $arrayParent: UnityEditor.SerializedProperty)
-            public constructor ()
-        }
-        class Display extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public Draw ($position: UnityEngine.Rect, $element: UnityEditor.GUI.Element) : void
-            public GetHeight ($element: UnityEditor.GUI.Element) : number
-            public constructor ($drawInfo: UnityEditor.GUI.DrawerInfo)
-            public constructor ()
-        }
-        class DisplayUtility extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public static PopupCreate ($info: UnityEditor.GUI.DrawerInfo, $index: number, $callback?: System.Action) : void
-            public static PopupTypes ($info: UnityEditor.GUI.DrawerInfo, $element: UnityEditor.GUI.Element) : void
-            public static PopupComponentsAndTypes ($info: UnityEditor.GUI.DrawerInfo, $element: UnityEditor.GUI.Element, $obj: UnityEngine.Object, $targetType: System.Type) : void
-            public static PopupComponents ($info: UnityEditor.GUI.DrawerInfo, $node: UnityEditor.SerializedProperty, $obj: UnityEngine.Object, $targetType: System.Type) : void
-            public static PopupArrayComponents ($info: UnityEditor.GUI.DrawerInfo, $arrayParent: UnityEditor.SerializedProperty, $targetType: System.Type) : void
-            public static CheckKeyValidity ($name: string) : boolean
-            public static CheckFields ($type: System.Type) : boolean
-            public static Copy ($from: UnityEditor.GUI.Element, $to: UnityEditor.GUI.Element) : void
-            public static Copy ($fromNode: UnityEditor.SerializedProperty, $toNode: UnityEditor.SerializedProperty, $targetType: System.Type) : void
-            public static CustomMenu ($options: System.Array$1<string>, $separator: System.Array$1<string>, $selected: System.Array$1<number>, $disabled: System.Array$1<number>, $callback: System.Action$1<number>) : void
-            public static GenCode ($pairs: System.Array$1<TSProperties.ResultPair>, $declareType: string, $useFullname: boolean) : string
-            public static PraseCode ($editor: UnityEditor.GUI.TSProperties_CustomEditor, $code: string) : void
-            public constructor ()
-        }
-        class Drawer extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public get element(): UnityEditor.GUI.Element;
-            public set element(value: UnityEditor.GUI.Element);
-            public get drawInfo(): UnityEditor.GUI.DrawerInfo;
-            public set drawInfo(value: UnityEditor.GUI.DrawerInfo);
-            public Draw ($position: UnityEngine.Rect, $label: UnityEngine.GUIContent) : void
-            public GetLineHeight () : number
-            public GetHeight () : number
-        }
-        class ArrayDrawer extends UnityEditor.GUI.Drawer
-        {
-            protected [__keep_incompatibility]: never;
         }
     }
     namespace Puerts {

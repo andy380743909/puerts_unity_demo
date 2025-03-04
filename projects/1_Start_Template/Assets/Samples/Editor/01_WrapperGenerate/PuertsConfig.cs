@@ -189,5 +189,14 @@ public class PuertsConfig
         "System.IO.Stream",
         "System.Net.HttpListenerTimeoutManager",
         "System.Net.Sockets.SocketAsyncEventArgs",
+        
+        //UnityEditor
+        "UnityEditor.GUI.ArrayDrawer",
+        "UnityEditor.GUI.Display",
+        "UnityEditor.GUI.DisplayUtility",
+        "UnityEditor.GUI.Drawer",
+        "UnityEditor.GUI.DrawerInfo",
+        "UnityEditor.GUI.Element",
+        "UnityEditor.GUI.TSProperties_CustomEditor",
     };
 }
