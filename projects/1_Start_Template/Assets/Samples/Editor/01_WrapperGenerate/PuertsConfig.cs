@@ -134,8 +134,11 @@ public class PuertsConfig
         "UnityEngine.Handheld",
         "UnityEngine.MeshRenderer",
         "UnityEngine.UI.DefaultControls",
+        
         "UnityEngine.AnimationClipPair", //Obsolete
         "UnityEngine.CacheIndex", //Obsolete
+        "UnityEngine.Camera.RenderRequest", //Obsolete
+        "UnityEngine.ClusterSerialization", //Obsolete
         "UnityEngine.SerializePrivateVariables", //Obsolete
         "UnityEngine.Networking.NetworkTransport", //Obsolete
         "UnityEngine.Networking.ChannelQOS", //Obsolete
@@ -154,6 +157,7 @@ public class PuertsConfig
         "UnityEngine.NetworkMessageInfo", //Obsolete[ERROR]
         "UnityEngine.UI.BaseVertexEffect", //Obsolete[ERROR]
         "UnityEngine.UI.IVertexModifier", //Obsolete[ERROR]
+        "UnityEngine.LightingSettings",
         //Windows Obsolete[ERROR]
         "UnityEngine.EventProvider",
         "UnityEngine.UI.GraphicRebuildTracker",

@@ -8435,50 +8435,6 @@ namespace PuertsStaticWrap
                 }
             };
         }
-        public static RegisterInfo GetRegisterInfo_UnityEngine_ClusterSerialization_Wrap() 
-        {
-            return new RegisterInfo 
-            {
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                BlittableCopy = false,
-#endif
-
-                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
-                {
-                    
-                    {"SaveTimeManagerState_static", new MemberRegisterInfo { Name = "SaveTimeManagerState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_SaveTimeManagerState
-#endif
-                    }},
-                    {"RestoreTimeManagerState_static", new MemberRegisterInfo { Name = "RestoreTimeManagerState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_RestoreTimeManagerState
-#endif
-                    }},
-                    {"SaveInputManagerState_static", new MemberRegisterInfo { Name = "SaveInputManagerState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_SaveInputManagerState
-#endif
-                    }},
-                    {"RestoreInputManagerState_static", new MemberRegisterInfo { Name = "RestoreInputManagerState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_RestoreInputManagerState
-#endif
-                    }},
-                    {"SaveClusterInputState_static", new MemberRegisterInfo { Name = "SaveClusterInputState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_SaveClusterInputState
-#endif
-                    }},
-                    {"RestoreClusterInputState_static", new MemberRegisterInfo { Name = "RestoreClusterInputState", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Method = UnityEngine_ClusterSerialization_Wrap.F_RestoreClusterInputState
-#endif
-                    }},
-                }
-            };
-        }
         public static RegisterInfo GetRegisterInfo_UnityEngine_SortingLayer_Wrap() 
         {
             return new RegisterInfo 
@@ -9850,45 +9806,6 @@ namespace PuertsStaticWrap
                     {"aspect", new MemberRegisterInfo { Name = "aspect", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
 #if !EXPERIMENTAL_IL2CPP_PUERTS
                     , PropertyGetter = UnityEngine_Camera_GateFitParameters_Wrap.G_aspect, PropertySetter = UnityEngine_Camera_GateFitParameters_Wrap.S_aspect
-#endif
-                    }},
-                }
-            };
-        }
-        public static RegisterInfo GetRegisterInfo_UnityEngine_Camera_RenderRequest_Wrap() 
-        {
-            return new RegisterInfo 
-            {
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                BlittableCopy = false,
-#endif
-
-                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
-                {
-                    
-                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , Constructor = UnityEngine_Camera_RenderRequest_Wrap.Constructor
-#endif
-                    }},
-                    {"isValid", new MemberRegisterInfo { Name = "isValid", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_Camera_RenderRequest_Wrap.G_isValid
-#endif
-                    }},
-                    {"mode", new MemberRegisterInfo { Name = "mode", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_Camera_RenderRequest_Wrap.G_mode
-#endif
-                    }},
-                    {"result", new MemberRegisterInfo { Name = "result", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_Camera_RenderRequest_Wrap.G_result
-#endif
-                    }},
-                    {"outputSpace", new MemberRegisterInfo { Name = "outputSpace", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
-#if !EXPERIMENTAL_IL2CPP_PUERTS
-                    , PropertyGetter = UnityEngine_Camera_RenderRequest_Wrap.G_outputSpace
 #endif
                     }},
                 }
@@ -43230,7 +43147,6 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.ClothSphereColliderPair), GetRegisterInfo_UnityEngine_ClothSphereColliderPair_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.ClothSkinningCoefficient), GetRegisterInfo_UnityEngine_ClothSkinningCoefficient_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Cloth), GetRegisterInfo_UnityEngine_Cloth_Wrap);
-                jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.ClusterSerialization), GetRegisterInfo_UnityEngine_ClusterSerialization_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.SortingLayer), GetRegisterInfo_UnityEngine_SortingLayer_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Keyframe), GetRegisterInfo_UnityEngine_Keyframe_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.AnimationCurve), GetRegisterInfo_UnityEngine_AnimationCurve_Wrap);
@@ -43240,7 +43156,6 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Cache), GetRegisterInfo_UnityEngine_Cache_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Camera), GetRegisterInfo_UnityEngine_Camera_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Camera.GateFitParameters), GetRegisterInfo_UnityEngine_Camera_GateFitParameters_Wrap);
-                jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.Camera.RenderRequest), GetRegisterInfo_UnityEngine_Camera_RenderRequest_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.BoundingSphere), GetRegisterInfo_UnityEngine_BoundingSphere_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.CullingGroupEvent), GetRegisterInfo_UnityEngine_CullingGroupEvent_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(UnityEngine.CullingGroup), GetRegisterInfo_UnityEngine_CullingGroup_Wrap);

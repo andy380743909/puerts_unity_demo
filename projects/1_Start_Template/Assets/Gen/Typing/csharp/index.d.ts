@@ -8813,16 +8813,6 @@
         */
         enum ClusterInputType
         { Button = 0, Axis = 1, Tracker = 2, CustomProvidedInput = 3 }
-        class ClusterSerialization extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            public static SaveTimeManagerState ($buffer: Unity.Collections.NativeArray$1<number>) : number
-            public static RestoreTimeManagerState ($buffer: Unity.Collections.NativeArray$1<number>) : boolean
-            public static SaveInputManagerState ($buffer: Unity.Collections.NativeArray$1<number>) : number
-            public static RestoreInputManagerState ($buffer: Unity.Collections.NativeArray$1<number>) : boolean
-            public static SaveClusterInputState ($buffer: Unity.Collections.NativeArray$1<number>) : number
-            public static RestoreClusterInputState ($buffer: Unity.Collections.NativeArray$1<number>) : boolean
-        }
         /** SortingLayer allows you to set the render order of multiple sprites easily. There is always a default SortingLayer named "Default" which all sprites are added to initially. Added more SortingLayers to easily control the order of rendering of groups of sprites. Layers can be ordered before or after the default layer.
         */
         class SortingLayer extends System.ValueType
@@ -33456,17 +33446,6 @@
         { None = 0, ObjectId = 1, Depth = 2, VertexNormal = 3, WorldPosition = 4, EntityId = 5, BaseColor = 6, SpecularColor = 7, Metallic = 8, Emission = 9, Normal = 10, Smoothness = 11, Occlusion = 12, DiffuseColor = 13 }
         enum RenderRequestOutputSpace
         { ScreenSpace = -1, UV0 = 0, UV1 = 1, UV2 = 2, UV3 = 3, UV4 = 4, UV5 = 5, UV6 = 6, UV7 = 7, UV8 = 8 }
-        class RenderRequest extends System.ValueType
-        {
-            protected [__keep_incompatibility]: never;
-            public get isValid(): boolean;
-            public get mode(): UnityEngine.Camera.RenderRequestMode;
-            public get result(): UnityEngine.RenderTexture;
-            public get outputSpace(): UnityEngine.Camera.RenderRequestOutputSpace;
-            public constructor ($mode: UnityEngine.Camera.RenderRequestMode, $rt: UnityEngine.RenderTexture)
-            public constructor ($mode: UnityEngine.Camera.RenderRequestMode, $space: UnityEngine.Camera.RenderRequestOutputSpace, $rt: UnityEngine.RenderTexture)
-            public constructor ()
-        }
     }
     namespace UnityEngine.Rendering {
         /** Opaque object sorting mode of a Camera.
