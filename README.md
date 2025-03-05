@@ -13,5 +13,15 @@
 
 * open `projects/0_Basic_Demo` or `projects/1_Start_Template`
 
+## Changelog
+
+### 2025-03-04
+
+为了在Unity 2022.3.53上打开工程并且在iOS上运行， 使用全js/ts编程，做了如下修改：
+* 对依赖的package进行升级
+* 添加了20来个obsolete的数据类型
+* 改进PuertsFilter.cs中对ref范型类的参数的支持
+* 添加了几个UnityEditor相关的类到黑名单（不知道为什么会生成，待查）
+
 ## More example? | 更多的示例或者教程？
 https://puerts.github.io/docs/puerts/unity/other/community
